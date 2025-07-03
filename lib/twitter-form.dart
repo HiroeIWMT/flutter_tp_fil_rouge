@@ -10,7 +10,8 @@ class TwitterFormLogin extends StatefulWidget{
 
   void onSubmit(){
     if(_formkey.currentState!.validate()){
-      print("Connexion succes");
+      //print("Connexion succes");
+      Navigator.pushNamed(context, "/twitter-page");
     }
   }
 

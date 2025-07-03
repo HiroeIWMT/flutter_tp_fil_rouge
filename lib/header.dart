@@ -23,7 +23,7 @@ class HeaderButton extends StatelessWidget{
   }
 
 }
-
+/*
 class HeaderWidget extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
@@ -46,4 +46,38 @@ class HeaderWidget extends StatelessWidget{
       );
   }
 
+}
+
+ */
+class HeaderWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity, // 親幅に合わせる
+      color: const Color(0xFF58B0F0),
+      child: Padding(
+        padding: const EdgeInsets.all(25),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Flexible(
+              child: HeaderButton(
+                align: TextAlign.left,
+                imgPath: "assets/pencil.png",
+              ),
+            ),
+            Flexible(
+              child: HeaderButton(libelle: "Accuiel"),
+            ),
+            Flexible(
+              child: HeaderButton(
+                align: TextAlign.right,
+                imgPath: "assets/search.png",
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
